@@ -6,18 +6,20 @@
 #' @noRd
 app_ui <- function(request) {
   tagList(
-   # Leave this function for adding external resources
+    # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
     navbarPage(
-      # theme = bslib::bs_theme(
-      #   version = 5
-      # ),
-      id = 'navbar',
+      # VERSÃO 5 DO BOODSTRAP
+      theme = bslib::bs_theme(
+        version = 5
+      ),
+      id = "navbar",
       title = "HRFLOW",
       tabPanel(
         id = "navbar-dash",
-        title = "Dashboard"
+        title = "Dashboard",
+        mod_dashboard_ui("dashboard_1")
       ),
       tabPanel(
         id = "navbar-employ",
@@ -34,10 +36,7 @@ app_ui <- function(request) {
       tabPanel(
         id = "navbar-report",
         title = "Reports"
-      ),
-      # footer = div(
-      # tags$footer()
-      # )
+      )
     ),
     # tags$footer(
     #   class="footer",
@@ -49,7 +48,6 @@ app_ui <- function(request) {
     #   )
   )
 }
-
 #' Add external Resources to the Application
 #'
 #' This function is internally used to add external

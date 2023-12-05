@@ -1,1 +1,17 @@
- 
+.container-fluid {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.container-fluid .tab-pane {
+  margin: 24px;
+  height: 100%;
+}
+
+.container-fluid .tab-pane .bslib-grid {
+  margin-bottom: 0;
+  width: 100%;
+  height: 50%;
+}
